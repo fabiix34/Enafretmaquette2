@@ -2,12 +2,10 @@ import { Button } from '@/app/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 
 export function Hero() {
-  const scrollToDevis = () => {
-    const element = document.getElementById('devis');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+
+  const navToDevis = () => {
+    window.location.href = '/devis';
+  }
 
   const scrollToServices = () => {
     const element = document.getElementById('services');
@@ -42,7 +40,7 @@ export function Hero() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button
-              onClick={scrollToDevis}
+              onClick={navToDevis}
               size="lg"
               className="bg-[#F39C12] hover:bg-[#E67E22] text-white text-lg px-8 py-6"
             >

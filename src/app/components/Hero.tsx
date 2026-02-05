@@ -1,18 +1,17 @@
 import { Button } from '@/app/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 export function Hero() {
+  const navigate = useNavigate();
 
   const navToDevis = () => {
-    window.location.href = '/devis';
+    navigate('/devis');
   }
 
-  const scrollToServices = () => {
-    const element = document.getElementById('services');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  const navToServices = () => {
+    navigate('/services');
+  }
 
   return (
     <section
@@ -48,7 +47,7 @@ export function Hero() {
               <ArrowRight className="ml-2" size={20} />
             </Button>
             <Button
-              onClick={scrollToServices}
+              onClick={navToServices}
               variant="outline"
               size="lg"
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 text-lg px-8 py-6"

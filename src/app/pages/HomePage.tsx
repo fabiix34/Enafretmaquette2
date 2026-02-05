@@ -1,10 +1,11 @@
 import { Hero } from '@/app/components/Hero';
+import { Link } from 'react-router-dom';
 
 export function HomePage() {
   return (
     <div>
       <Hero />
-      
+
       {/* Why Choose Us Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -97,18 +98,18 @@ export function HomePage() {
             Contactez-nous dès aujourd'hui pour discuter de vos besoins en transport et logistique
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/devis"
+            <Link
+              to="/devis"
               className="inline-flex items-center justify-center px-8 py-4 bg-white text-gray-900 rounded-lg hover:bg-gray-100 transition-colors text-lg"
             >
               Obtenir un devis gratuit
-            </a>
-            <a
-              href="/contact"
+            </Link>
+            <Link
+              to="/contact"
               className="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors text-lg"
             >
               Nous contacter
-            </a>
+            </Link>
           </div>
         </div>
       </section>
